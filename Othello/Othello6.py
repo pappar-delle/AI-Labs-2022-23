@@ -5,14 +5,7 @@ def switchTok(token):
 
 default = '.'*27 + 'OX......XO' + '.'*27
 nbrs = {}
-newp = [i for i in range(0, len(default))]
-for i in newp:
-    if i % 8 == 0:
-        nbrs[i] = {i + 1,i - 8, i + 8,i - 7,i + 9}.intersection(newp)
-    elif i % 8 == 7:
-        nbrs[i] = {i - 1, i - 8, i + 8, i + 7, i - 9}.intersection(newp)
-    else:
-        nbrs[i] = {i - 1,i + 1, i - 8, i + 8, i - 7, i + 7, i - 9, i + 9}.intersection(newp)
+
 
 indexList = []
 futMoveCache = {}
@@ -22,19 +15,6 @@ movesCache = {}
 makeMoveCache = {}
 moveSeqCache = {}
 
-for i in newp:
-    indDict = {nbr: [] for nbr in nbrs[i]}
-    for n in nbrs[i]:
-        diff = i - n
-        prev = n
-        current = n + diff
-        while -1 < current < 64 and current in nbrs[prev]:
-            if current != i: indDict[n].append(current)
-            prev = current
-            current = current + diff
-        if len(indDict[n]) == 0:
-            del indDict[n]
-    indexList.append(indDict)
 
 moveBoard = {index: {key for key in indexList[index]} for index in nbrs}
 getRid = {key for key in moveBoard if len(moveBoard[key]) == 0}
