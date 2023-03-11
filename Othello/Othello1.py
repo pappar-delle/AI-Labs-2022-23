@@ -88,15 +88,12 @@ else:
 
 # Pooja Somayajula, 4, 2024
 
-# Lab Descriptions
 
-# --- 
+#Submit a script that takes up to two command line arguments, both optional.
 
-#ubmit a script that takes up to two command line arguments, both optional.
+#The first is an Othello board, represented by a string of 64 characters from {*".xoXO"}.  The default, if the board is not provided is '.'*27 + "ox......xo" + '.'*27
 
-#he first is an Othello board, represented by a string of 64 characters from {*".xoXO"}.  The default, if the board is not provided is '.'*27 + "ox......xo" + '.'*27
-
-#he second is the token for which to find the set of moves.  The default, if not provided, is the token that would move if there had been no passes in any prior moves.
+#The second is the token for which to find the set of moves.  The default, if not provided, is the token that would move if there had been no passes in any prior moves.
 
 #The output is to be a 2D representation of the board, with possible move positions indicated by an asterisk.  
 #Following this (on one line) should be a sequence of all possible moves, as integers, where each integer is in range(64).  
