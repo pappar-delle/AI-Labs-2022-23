@@ -1,3 +1,16 @@
+#Find all words ...
+#70: ... where each vowel occurs at least once
+#71: ... containing exactly 5 vowels
+#72: ... with w acting as vowel
+#73: ... where if all but the first 3 and last 3 letters are removed, a palindrome results
+#74: ... where there is exactly one b and one t, and they are adjacent to each other
+#75: ... with the longest contiguous block of one letter
+#76: ... with the greatest number of a repeated letter
+#77: ... with the greatest number of adjacent pairs of identical letters
+#78: ... with the greatest number of consonants
+#79: ... where no letter is repeated more than once
+
+
 import sys; args = sys.argv[1:]
 idx = int(args[0])-70
 
