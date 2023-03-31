@@ -2,3 +2,5 @@
 
 TJHSST
 Artificial Intelligence Labs from 2022-23
+
+ai.sites.tjhsst.edu
